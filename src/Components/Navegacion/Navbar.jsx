@@ -1,5 +1,6 @@
-import React from 'react'
 import {Link} from 'react-router-dom'
+import CartWidget from '../CartWidget'
+import logo from '../../assets/image/Shopping_cart_font_awesome.png';
 
 const Navbar = () => {
     return (
@@ -22,6 +23,7 @@ const Navbar = () => {
                             <Link className="nav-link" to='/manicura'>Manicura</Link>
                             </li>
                         </ul>
+                        <CartWidget icon={logo} alt={'a'} width={'30px'} />
                     </div>
                 </div>
             </nav>
