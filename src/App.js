@@ -21,7 +21,7 @@ function App() {
       <Titulo titulo='Academias Onix'/>
       <Router>
         <Navbar/>
-        <ItemListContainer />
+        <ItemListContainer valorCarrito={'0'} />
         <Switch>
           <Route path='/' exact component={''}/>
           <Route path='/peluqueria' component={Peluqueria}/>
