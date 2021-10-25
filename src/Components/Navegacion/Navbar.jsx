@@ -1,8 +1,8 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget'
 import logo from '../../assets/image/carrito.png';
 
-const Navbar = () => {
+const Navbar = ({ itemsCount }) => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -17,19 +17,19 @@ const Navbar = () => {
                                 <Link className="nav-link" to='/peluqueria'>Peluqueria</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to='/barberia'>Barberia</Link>
+                                <Link className="nav-link" to='/barberia'>Barberia</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to='/manicura'>Manicura</Link>
+                                <Link className="nav-link" to='/manicura'>Manicura</Link>
                             </li>
                         </ul>
-                        <CartWidget icon={logo} alt={'a'} width={'30px'} />
+                        <CartWidget icon={logo} alt={'a'} width={'30px'} itemsCount={itemsCount} />
                     </div>
                 </div>
             </nav>
         </div>
 
-        
+
     )
 }
 

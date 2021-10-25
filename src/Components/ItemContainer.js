@@ -1,18 +1,18 @@
 import ItemCount from './ItemCount'
-import {Card} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
-export default function ItemContainer() {
-    return(
+export default function ItemContainer({ handlerCount, handlerItemsCart }) {
+    return (
         <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-            </Card.Text>
-            <ItemCount stock={8} initial={1} />
-        </Card.Body>
+            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                </Card.Text>
+                <ItemCount stock={8} initial={0} handlerCount={(e) => handlerCount(e)} handlerItemsCart={(e) => handlerItemsCart(e)} />
+            </Card.Body>
         </Card>
     )
 }
