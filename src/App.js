@@ -5,6 +5,8 @@ import Barberia from './Components/Pages/Barberia';
 import Manicura from './Components/Pages/Manicura';
 import Peluqueria from './Components/Pages/Peluqueria';
 import ItemListContainer from './Components/ItemListContainer';
+import ItemContainer from './Components/ItemContainer';
+
 
 
 const Titulo= ({titulo}) => {
@@ -21,7 +23,9 @@ function App() {
       <Titulo titulo='Academias Onix'/>
       <Router>
         <Navbar/>
-        <ItemListContainer valorCarrito={'0'} />
+        <ItemListContainer valorCarrito={'0'}>
+          <ItemContainer/>
+        </ItemListContainer>
         <Switch>
           <Route path='/' exact component={''}/>
           <Route path='/peluqueria' component={Peluqueria}/>
