@@ -5,8 +5,7 @@ import Barberia from './Components/Pages/Barberia';
 import Manicura from './Components/Pages/Manicura';
 import Peluqueria from './Components/Pages/Peluqueria';
 import ItemListContainer from './Components/ItemListContainer';
-import ItemContainer from './Components/ItemContainer';
-import { useState } from 'react';
+import ItemList from './Components/ItemList';
 
 
 
@@ -19,25 +18,13 @@ const Titulo = ({ titulo }) => {
 }
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [items, setItems] = useState(0)
-
-  const handlerCount = (value) => {
-    setCount(count + value)
-  }
-
-  const handlerItemsCart = (value) => {
-    setItems(items + value)
-    setCount(0)
-  }
-
   return (
     <div className="App">
       <Titulo titulo='Academias Onix' />
       <Router>
-        <Navbar itemsCount={items} />
-        <ItemListContainer valorCarrito={count}>
-          <ItemContainer handlerCount={e => handlerCount(e)} handlerItemsCart={e => handlerItemsCart(e)} />
+        <Navbar  />
+        <ItemListContainer>
+          <ItemList/>
         </ItemListContainer>
         <Switch>
           <Route path='/' exact component={''} />

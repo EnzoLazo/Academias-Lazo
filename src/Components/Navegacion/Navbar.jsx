@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget'
 import logo from '../../assets/image/carrito.png';
 
-const Navbar = ({ itemsCount }) => {
+const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -23,7 +23,7 @@ const Navbar = ({ itemsCount }) => {
                                 <Link className="nav-link" to='/manicura'>Manicura</Link>
                             </li>
                         </ul>
-                        <CartWidget icon={logo} alt={'a'} width={'30px'} itemsCount={itemsCount} />
+                        <CartWidget icon={logo} alt={'a'} width={'30px'}  />
                     </div>
                 </div>
             </nav>
