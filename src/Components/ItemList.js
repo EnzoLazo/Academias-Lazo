@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
-import { getItem } from '../Components/Item';
-import { Card } from 'react-bootstrap';
+import { getFetch  } from './getFetch ';
 import '../styles/ItemList.css'
+import Item from './Item';
 
 
 const ItemList = () => {
@@ -9,7 +9,7 @@ const ItemList = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        getItem
+        getFetch 
         .then( res => {        
             console.log('llamada a api') // alguna accion con la respuesta  
             setProduct(res)
@@ -23,21 +23,7 @@ const ItemList = () => {
             <h2> Nuestros Productos </h2>
             <div className='Flexbox'>
             { loading ? <h1>Cargando...</h1> :         
-                    product.map(prod=>  <Card className="marg" key={prod.id} style={{ width: '20rem' }} > 
-                                                <Card.Img variant="top" src={prod.imagen} alt='foto producto' />
-                                                <Card.Body>
-                                                <Card.Title>{prod.nombre}</Card.Title>
-                                                <Card.Text>
-                                                {prod.precio}
-                                                </Card.Text>
-                                                </Card.Body>
-                                                <div className="card-footer">
-                                                    <button className="btn btn-outline-primary btn-block">
-                                                        detalle del producto
-                                                    </button>
-                                                </div>
-                                                
-                                        </Card>
+                    product.map(prod => <Item key={prod.id} imagen={prod.imagen} nombre={prod.nombre} precio={prod.precio}/>
             
             )
             }
