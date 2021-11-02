@@ -1,8 +1,7 @@
-import '../styles/ItemListContainer.css'
-import ItemList from './ItemList'
+import '../styles/Contador.css'
 import ItemCount from './ItemCount'
 
-const ItemListContainer = ({ valorCarrito }) => {
+const Contador = () => {
     const handleClick = (total) => {
         alert(`La cantidad agregada es ${total}`)
         }
@@ -10,11 +9,9 @@ const ItemListContainer = ({ valorCarrito }) => {
 
     return (
         <div className='prueba'>
-            <p>Este es el futuro carrito {valorCarrito} </p>
             <ItemCount stock={8} initial={1} onAdd={handleClick} />
-            <ItemList/>
             </div>
     )
 }
 
-export default ItemListContainer
+export default Contador

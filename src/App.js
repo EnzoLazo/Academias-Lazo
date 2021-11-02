@@ -4,35 +4,31 @@ import Navbar from './Components/Navegacion/Navbar';
 import Barberia from './Components/Pages/Barberia';
 import Manicura from './Components/Pages/Manicura';
 import Peluqueria from './Components/Pages/Peluqueria';
-import ItemListContainer from './Components/ItemListContainer';
-import ItemList from './Components/ItemList';
 
 
 
-const Titulo = ({ titulo }) => {
-  return (
-    <>
-      <h2> {titulo}</h2>
-    </>
-  )
-}
+// const Titulo= ({titulo}) => {
+//   return(
+//     <>
+//     <h2> {titulo}</h2>
+//     </>
+//   )
+// }
+
 
 function App() {
   return (
     <div className="App">
-      <Titulo titulo='Academias Onix' />
       <Router>
-        <Navbar  />
-        <ItemListContainer>
-          <ItemList/>
-        </ItemListContainer>
+        <Navbar />
         <Switch>
           <Route path='/' exact component={''} />
           <Route path='/peluqueria' component={Peluqueria} />
           <Route path='/barberia' component={Barberia} />
           <Route path='/manicura' component={Manicura} />
         </Switch>
-      </Router>
+      </Router>   
+
     </div>
   );
 }

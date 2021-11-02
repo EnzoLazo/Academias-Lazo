@@ -1,3 +1,11 @@
+export const getFetchUnProducto = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve(producto)
+    }, 2000)
+
+})
+
+
 const producto = [
 {"id":1,"nombre": "Whal Magic Clip","precio": 15000,"categoria":"Clipper","cantidad":1,"imagen":"./assets/img/0001.jpeg"},
 {"id":2, "nombre": "Babyliss Goldfx", "precio": 22000, "categoria":"Clipper" ,"cantidad":1,"imagen":"./assets/img/0002.jpeg"},

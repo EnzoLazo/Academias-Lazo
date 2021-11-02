@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Manicura = () => {
-    return (
+    return(
         <div>
-            <h1>Manicura</h1>
+            <h1>Pagina En construccion</h1>
         </div>
     )
 }

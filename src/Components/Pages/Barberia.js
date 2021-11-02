@@ -1,10 +1,12 @@
 import React from 'react'
-
+import ItemList from '../ItemList'
+import Contador from '../Contador'
 const Barberia = () => {
     return (
-        <div>
-            <h1> Barberia </h1>
-        </div>
+        <>
+        <Contador/>
+        <ItemList/>
+        </>
     )
 }
 
