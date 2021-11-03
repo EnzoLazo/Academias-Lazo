@@ -4,6 +4,8 @@ import Navbar from './Components/Navegacion/Navbar';
 import Barberia from './Components/Pages/Barberia';
 import Manicura from './Components/Pages/Manicura';
 import Peluqueria from './Components/Pages/Peluqueria';
+import ItemListContainer from './Components/ItemListContainer';
+import ItemList from './Components/ItemList';
 
 
 
@@ -27,7 +29,8 @@ function App() {
           <Route path='/barberia' component={Barberia} />
           <Route path='/manicura' component={Manicura} />
         </Switch>
-      </Router>   
+      </Router>  
+      <ItemListContainer/>
 
     </div>
   );
